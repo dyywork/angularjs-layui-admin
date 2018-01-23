@@ -1,0 +1,9 @@
+<div class="layui-tab layui-tab-brief" lay-filter="test1" lay-allowClose="true">
+    <ul class="layui-tab-title">
+        <li ng-repeat="item in tabsData" ng-click="goTabs(item);$event.stopPropagation()" ng-class="{'layui-this':item.show}">
+            {{item.title}}
+            <i class="layui-icon layui-unselect layui-tab-close" ng-hide="tabsData.length == 1"
+               ng-click="goRemoveTabs(item);$event.stopPropagation()">&#x1006;</i>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>rem-bank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,target-densitydpi=device-dpi">
+    <script src="adaptive.js"></script>
+    <script>
+        window['adaptive'].desinWidth = 750;
+        window['adaptive'].baseFont = 28;
+        window['adaptive'].init();
+    </script>
+    <link rel="stylesheet" href="iosSelect.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?b25bf95dd99f58452db28b1e99a1a46f";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<a href="https://github.com/zhoushengmufc/iosselect">查看文档</a>
+<div class="form-item item-line">                 
+    <label>请选择银行</label>                 
+    <div class="pc-box">                     
+        <input type="hidden" name="bank_id" id="bankId" value="">                     
+        <span id="showBank">点击这里选择银行</span>  
+    </div>             
+</div>
+</body>
+<script src="bank.js"></script>
+<script src="../../src/iosSelect.js"></script>
+<script type="text/javascript">
+    var showBankDom = document.querySelector('#showBank');
+    var bankIdDom = document.querySelector('#bankId');
+
+    showBankDom.addEventListener('click', function () {
+        var bankId = showBankDom.dataset['id'];
+        var bankName = showBankDom.dataset['value'];
+
+        var bankSelect = new IosSelect(1, 
+            [data],
+            {
+                title: '银行卡选择',
+                oneLevelId: bankId,
+                itemHeight: 0.7,
+                headerHeight: 0.88,
+                itemShowCount: 3,
+                cssUnit: 'rem',
+                callback: function (selectOneObj) {
+                    bankIdDom.value = selectOneObj.id;
+                    showBankDom.innerHTML = selectOneObj.value;
+                    showBankDom.dataset['id'] = selectOneObj.id;
+                    showBankDom.dataset['value'] = selectOneObj.value;
+                }
+        });
+    });
+</script>
+</body>
+</html>
