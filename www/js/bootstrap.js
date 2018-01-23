@@ -1,6 +1,6 @@
 /*global define, require, console, cordova, navigator */
 
-define(['ionic', 'angular', 'app', 'routes'], function (ionic, angular, app) {
+define(['angular', 'app', 'routes'], function ( angular, app) {
   'use strict';
 
   var $html,

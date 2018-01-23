@@ -1,8 +1,9 @@
+
 define(function () {
   'use strict';
 
 
-  return ['$scope', '$state', 'httpServices', '$ionicPopup', function ($scope, $state, httpServices, $ionicPopup) {
+  return ['$scope', '$state', 'httpServices', function ($scope, $state, httpServices) {
     var element = layui.element,
       form = layui.form;
 

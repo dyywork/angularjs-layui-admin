@@ -1,34 +1,34 @@
 [
     {
-        "mainTitle":"所有中心",
+        "mainTitle":"页面元素",
         "id":0,
         "parentShow":true,
         "childTree":[
             {
                 "parentId":0,
                 "subId":0,
-                "title":"用户中心",
+                "title":"首页",
                 "baseUrl":"tab.home",
                 "show":true
             },
             {
                 "parentId":0,
                 "subId":1,
-                "title":"用户分支",
+                "title":"表单",
                 "baseUrl":"tab.dash",
                 "show":false
             },
             {
                 "parentId":0,
                 "subId":2,
-                "title":"测试用户",
-                "baseUrl":"tab.chats",
+                "title":"表格",
+                "baseUrl":"tab.table",
                 "show":false
             }
         ]
     },
     {
-        "mainTitle":"测试中心",
+        "mainTitle":"内置模板",
         "id":1,
         "parentShow":false,
         "childTree":[

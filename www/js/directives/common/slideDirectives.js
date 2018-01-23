@@ -6,7 +6,7 @@
 define(['angular'], function (angular) {
   'use strict';
 
-  return ['$ionicHistory', 'httpServices', 'tabsDataService', 'infoService', function ($ionicHistory, httpServices, tabsDataService, infoService) {
+  return ['httpServices', 'tabsDataService', 'infoService', function ( httpServices, tabsDataService, infoService) {
     return {
       restrict: 'AEMC',
       replace: true,
@@ -38,16 +38,6 @@ define(['angular'], function (angular) {
 
         };
 
-
-        scope.treeHeader = function (res) {
-          for (var i = 0; i < scope.treeData.length; i++) {
-            if (res.id === scope.treeData[i].id) {
-              scope.treeData[i].parentShow = true;
-            } else {
-              scope.treeData[i].parentShow = false;
-            }
-          }
-        }
 
       }
     }

@@ -2,8 +2,12 @@
     <div class="layui-layout layui-layout-admin">
         <div class="layui-header" style="margin-bottom: 300px;">
             <div class="layui-logo">layui 后台布局</div>
+            
             <!-- 头部区域（可配合layui已有的水平导航） -->
             <ul class="layui-nav layui-layout-left">
+                <button class="layui-btn layui-btn-sm" ng-click="slideSwitch()">
+                    <i class="layui-icon">&#xe60f;</i>
+                </button>
                 <li class="layui-nav-item"><a href="">控制台</a></li>
                 <li class="layui-nav-item"><a href="">商品管理</a></li>
                 <li class="layui-nav-item"><a href="">用户</a></li>
@@ -32,40 +36,18 @@
         </div>
         <!--侧边栏-->
         <slide-tree data="{{treeData}}"></slide-tree>
-        <!--<div class="layui-side layui-bg-black">
-            <div class="layui-side-scroll">
-                <ul class="layui-nav layui-nav-tree" lay-filter="slide">
-                    <li class="layui-nav-item" ng-repeat="item in treeData"
-                        ng-class="{'layui-nav-itemed': item.parentShow}">
-                        <a class="" href="javascript:;" ng-click="treeHeader(item)">{{item.mainTitle}}</a>
-                        <dl class="layui-nav-child">
-                            <dd ng-repeat="i in item.childTree" ng-class="{'layui-this': i.show }" ng-click="goTree(i);$event.stopPropagation()">
-                                <a href="javascript:;">{{i.title}}</a></dd>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>-->
+      
         
-        <div class="layui-body">
+        <div class="layui-body" ng-class="{bodySwitch:isOk}">
             <!--tabs区域-->
             <tab-sub></tab-sub>
-           <!-- <div class="layui-tab layui-tab-brief" lay-filter="test1" lay-allowClose="true">
-                <ul class="layui-tab-title">
-                    <li ng-repeat="item in tabsData" ng-click="goTabs(item);$event.stopPropagation()" ng-class="{'layui-this':item.show}">
-                        {{item.title}}
-                        <i class="layui-icon layui-unselect layui-tab-close" ng-hide="tabsData.length == 1"
-                           ng-click="goRemoveTabs(item);$event.stopPropagation()">&#x1006;</i>
-                    </li>
-                </ul>
-            </div>-->
             <!-- 内容主体区域 -->
             <div style="padding: 15px;">
                 <ui-view name="home"></ui-view>
             </div>
         </div>
         
-        <div class="layui-footer">
+        <div class="layui-footer"  ng-class="{bodySwitch:isOk}">
             <!-- 底部固定区域 -->
             © layui.com - 底部固定区域
         </div>

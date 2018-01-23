@@ -11,12 +11,20 @@ define(function () {
     });
 
     var tabs = infoService.getSession('tabNav');
-    if (tabs.length && tabs.length > 1) {
+    if (tabs &&tabs.length && tabs.length > 1) {
       $scope.tabsData = tabs;
     } else {
       $scope.tabsData = tabsDataService.all();
     }
+    $scope.isOk = false;
+    $scope.slideSwitch = function () {
+      if ($scope.isOk){
+        $scope.isOk = false;
+      }else {
+        $scope.isOk = true;
+      }
 
+    }
 
   }]
 

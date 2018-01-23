@@ -9,6 +9,53 @@
     margin: 0px auto;
 }
 
+.slideSwitch{
+    -webkit-animation:myfirst1 0.1s linear;
+    -webkit-animation-play-state:running;
+    -webkit-animation-fill-mode:forwards;
+}
+.bodySwitch{
+    -webkit-animation:myfirst 0.1s linear;
+    -webkit-animation-play-state:running;
+    -webkit-animation-fill-mode:forwards;
+}
 
+@keyframes myfirst
+ {
+     0%   {left:220px;}
+     100% {left:20px;}
+ }
+@-webkit-keyframes myfirst
+ {
+     0%   {left:220px;}
+     100% {left:20px;}
+ }
+@-moz-keyframes myfirst
+{
+    0%   {left:220px;}
+    100% {left:20px;}
+}
+@keyframes myfirst1
+{
+    0%   {left:0px;}
+    100% {left:-200px;}
+}
+@-webkit-keyframes myfirst1
+{
+    0%   {left:0px;}
+    100% {left:-200px;}
+}
+@-moz-keyframes myfirst1
+{
+    0%   {left:0px;}
+    100% {left:-200px;}
+}
+/*@-moz-keyframes myfirst !* Firefox *!
+{
+    0%   {background:red;}
+    25%  {background:yellow;}
+    50%  {background:blue;}
+    100% {background:green;}
+}*/
 
 

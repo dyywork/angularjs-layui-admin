@@ -16,14 +16,10 @@ define(['angular'], function (angular) {
     var chats = [{
       "parentId": 0,
       "subId": 0,
-      "title": "用户中心",
+      "title": "首页",
       "baseUrl": "tab.home",
       "show": true
     }];
-
-
-
-
 
 
 
@@ -42,13 +38,6 @@ define(['angular'], function (angular) {
         }
       }
     };
-
-    var sessionData = sessionStorage.getItem('tabsData');
-
-    function sessionSave(data) {
-      sessionStorage.removeItem('tabsData');
-      sessionStorage.setItem('tabsData', JSON.stringify(data));
-    }
 
     return {
       all: function () {

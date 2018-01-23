@@ -6,7 +6,7 @@
 define(['angular'], function (angular) {
   'use strict';
 
-  return ['$ionicHistory', 'httpServices', 'tabsDataService', 'infoService', function ($ionicHistory, httpServices, tabsDataService, infoService) {
+  return ['httpServices', 'tabsDataService', 'infoService', function (httpServices, tabsDataService, infoService) {
     return {
       restrict: 'AEMC',
       replace: true,
@@ -38,7 +38,6 @@ define(['angular'], function (angular) {
         };
 
         scope.goRemoveTabs = function (res) {
-
           tabsDataService.getRemove(res);
           scope.tabsData = infoService.getSession('tabNav');
           for (var a = 0; a < scope.tabsData.length; a++) {
