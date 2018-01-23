@@ -15,35 +15,70 @@
                 "parentId":0,
                 "subId":1,
                 "title":"表单",
-                "baseUrl":"tab.dash",
+                "baseUrl":"tab.form",
                 "show":false
             },
             {
                 "parentId":0,
                 "subId":2,
-                "title":"表格",
-                "baseUrl":"tab.table",
+                "title":"导航/面包屑",
+                "baseUrl":"tab.nav",
+                "show":false
+            },
+            {
+                "parentId":0,
+                "subId":3,
+                "title":"选项卡",
+                "baseUrl":"tab.selectCar",
+                "show":false
+            },
+            {
+                "parentId":0,
+                "subId":4,
+                "title":"进度条",
+                "baseUrl":"tab.progress",
+                "show":false
+            },
+            {
+                "parentId":0,
+                "subId":5,
+                "title":"面板",
+                "baseUrl":"tab.colla",
+                "show":false
+            },
+            {
+                "parentId":0,
+                "subId":6,
+                "title":"徽章",
+                "baseUrl":"tab.badge",
+                "show":false
+            },
+            {
+                "parentId":0,
+                "subId":7,
+                "title":"时间线",
+                "baseUrl":"tab.timeline",
                 "show":false
             }
         ]
     },
     {
-        "mainTitle":"内置模板",
+        "mainTitle":"组件示例",
         "id":1,
         "parentShow":false,
         "childTree":[
             {
                 "parentId":1,
                 "subId":0,
-                "title":"用户列表",
-                "baseUrl":"tab.table",
+                "title":"弹出层",
+                "baseUrl":"tab.layer",
                 "show":false
             },
             {
                 "parentId":1,
                 "subId":1,
-                "title":"列表求和",
-                "baseUrl":"tab.dash",
+                "title":"日期与时间选择",
+                "baseUrl":"tab.laydate",
                 "show":false
             }
         ]

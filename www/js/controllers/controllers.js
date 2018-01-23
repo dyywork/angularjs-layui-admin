@@ -13,7 +13,16 @@ define(function (require) {
   controllers.controller('loginCtrl',require('../../templates/login/loginCtrl'));
 
   controllers.controller('homeCtrl',require('../../templates/home/homeCtrl'));
+  controllers.controller('formCtrl',require('../../templates/home/formCtrl'));
+  controllers.controller('navCtrl',require('../../templates/home/navCtrl'));
+  controllers.controller('selectCarCtrl',require('../../templates/home/selectCarCtrl'));
+  controllers.controller('progressCtrl',require('../../templates/home/progressCtrl'));
+  controllers.controller('collaCtrl',require('../../templates/home/collaCtrl'));
+  controllers.controller('badgeCtrl',require('../../templates/home/badgeCtrl'));
+  controllers.controller('timelineCtrl',require('../../templates/home/timelineCtrl'));
   controllers.controller('tableCtrl',require('../../templates/table/tableCtrl'));
+  controllers.controller('layerCtrl',require('../../templates/unit/layerCtrl'));
+  controllers.controller('laydateCtrl',require('../../templates/unit/laydateCtrl'));
 
 
 

@@ -3,7 +3,7 @@ define(function () {
 
   var IosSelect = require('IosSelect');
 
-  return ['$scope', '$state', function ($scope, $state) {
+  return ['$scope', function ($scope) {
     var layer = layui.layer
       , form = layui.form,
       element = layui.element;
