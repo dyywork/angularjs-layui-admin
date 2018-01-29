@@ -3,13 +3,13 @@
     <div class="layui-form-item">
         <label class="layui-form-label">输入框</label>
         <div class="layui-input-inline">
-            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+            <input type="text" name="title" ng-model="login.name" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item margauto">
         <label class="layui-form-label">密码框</label>
         <div class="layui-input-inline">
-            <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+            <input type="text" name="text" ng-model="login.age" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
         </div>
     </div>
     
@@ -21,7 +21,7 @@
     </div>
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <button class="layui-btn" ng-click="goDash()">登录</button>
+            <button class="layui-btn" ng-click="goDash(login.name,login.age)">登录</button>
         </div>
     </div>
 </form>

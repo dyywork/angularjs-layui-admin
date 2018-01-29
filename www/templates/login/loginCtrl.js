@@ -9,8 +9,19 @@ define(function () {
 
     element.render();
     form.render();
+    $scope.login={
+      name:'',
+      age:'',
+      switch:true
+    }
 
-    $scope.goDash = function () {
+
+    $scope.goDash = function (name,age) {
+
+      httpServices.getlist('users/addUser?name='+ name +'&age='+age,'GET').then(function (res) {
+        console.log(res)
+      })
+
       $state.go('tab.home')
     }
   }]

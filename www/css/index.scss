@@ -1,5 +1,7 @@
-
-$color :red;
+$body:#ccc;
 body{
-  background: $color;
+  background: $body;
+  div{
+    color:red;
+  }
 }

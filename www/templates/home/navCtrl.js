@@ -7,7 +7,7 @@ define(function () {
     var layer = layui.layer
       , form = layui.form,
       element = layui.element;
-
+    element.render()
     form.render()
     element.on('nav(demo)', function(elem){
       //console.log(elem)
