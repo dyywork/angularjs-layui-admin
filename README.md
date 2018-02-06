@@ -31,9 +31,9 @@ npm install 或 cnpm install （cnpm 为淘宝镜像大家都懂的）
 
 npm run build 是打包的命令
 
-作者
+###作者 : 丁永亚</br>
 ----
-丁永亚</br>
-邮箱
+
+###邮箱  :  yahya_dyy@163.com
 ----
-yahya_dyy@163.com
+
