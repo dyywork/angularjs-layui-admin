@@ -12,16 +12,11 @@ define(function () {
     $scope.login={
       name:'',
       age:'',
-      switch:true
+      switch:true,
+      value:true
     }
 
-
     $scope.goDash = function (name,age) {
-
-      httpServices.getlist('users/addUser?name='+ name +'&age='+age,'GET').then(function (res) {
-        console.log(res)
-      })
-
       $state.go('tab.home')
     }
   }]

@@ -12,5 +12,7 @@ define(function (require) {
   directives.directive('slideTree',require('directives/common/slideDirectives'));
   directives.directive('tabSub',require('directives/common/tabDirectives'));
 
+  directives.directive('layuiCheckbox',require('directives/layuiform/formComponent'));
+
   return directives;
 });

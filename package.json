@@ -2,10 +2,10 @@
   "name": "ionic-project",
   "version": "1.1.1",
   "description": "An Ionic project",
-    "scripts": {
-        "start":"ionic serve",
-        "build":"cd www && node r.js -o buildconfig.js"
-    },
+  "scripts": {
+    "start": "ionic serve",
+    "build": "cd www && node r.js -o buildconfig.js"
+  },
   "devDependencies": {
     "gulp": "^3.5.6",
     "gulp-clean-css": "^3.7.0",
