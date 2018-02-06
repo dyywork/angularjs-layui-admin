@@ -5,6 +5,8 @@
 
 首先大家都知道怎么把这个模板代码拷到本地吧！！！！！！！！
 
+感觉还可以的就star一下哦！！！！！！
+
 下面是部分截图
 
 !['form表单部分'](www/img/form.jpg)
@@ -28,3 +30,10 @@ npm install 或 cnpm install （cnpm 为淘宝镜像大家都懂的）
 然后 npm run start 就可以运行起来了
 
 npm run build 是打包的命令
+
+作者
+----
+丁永亚
+邮箱
+----
+yahya_dyy@163.com
