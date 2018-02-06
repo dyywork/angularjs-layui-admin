@@ -9,6 +9,8 @@
 
 !['form表单部分'](www/img/form.jpg)
 
+!['index'](www/img/index.png)
+
 使用这个模板，要了解angular1.x 这个mvvm框架的基本使用方法；
 
 这里使用AMD的规范
