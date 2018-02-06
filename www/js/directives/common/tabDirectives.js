@@ -6,7 +6,7 @@
 define(['angular'], function (angular) {
   'use strict';
 
-  return ['httpServices', 'tabsDataService', 'infoService', function (httpServices, tabsDataService, infoService) {
+  return ['httpServices', 'tabsDataService', 'infoService','$rootScope', function (httpServices, tabsDataService, infoService,$rootScope) {
     return {
       restrict: 'AEMC',
       replace: true,
@@ -17,6 +17,7 @@ define(['angular'], function (angular) {
 
         elements.render();
         form.render();
+        $rootScope.tabsData = JSON.parse(attrs.data);
 
         scope.goTabs = function (res) {
           for (var i = 0; i < scope.treeData.length; i++) {
@@ -34,12 +35,12 @@ define(['angular'], function (angular) {
             }
           }
           tabsDataService.switchTab(res);
-          scope.tabsData = infoService.getSession('tabNav')
+          $rootScope.tabsData = infoService.getSession('tabNav')
         };
 
         scope.goRemoveTabs = function (res) {
           tabsDataService.getRemove(res);
-          scope.tabsData = infoService.getSession('tabNav');
+          $rootScope.tabsData = infoService.getSession('tabNav');
           for (var a = 0; a < scope.tabsData.length; a++) {
             if (scope.tabsData[a].show) {
               for (var i = 0; i < scope.treeData.length; i++) {

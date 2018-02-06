@@ -1,7 +1,7 @@
 define(function () {
   'use strict';
 
-  return ['$scope', '$state', 'httpServices', 'tabsDataService', 'infoService', function ($scope, $state, httpServices, tabsDataService, infoService) {
+  return ['$scope', '$state', 'httpServices', 'tabsDataService', 'infoService','$rootScope', function ($scope, $state, httpServices, tabsDataService, infoService,$rootScope) {
     var element = layui.element,
       form = layui.form;
 
@@ -12,10 +12,15 @@ define(function () {
 
     var tabs = infoService.getSession('tabNav');
     if (tabs &&tabs.length && tabs.length > 1) {
-      $scope.tabsData = tabs;
+      console.log(tabs)
+      $rootScope.tabsData = tabs;
+
     } else {
-      $scope.tabsData = tabsDataService.all();
+      $rootScope.tabsData = tabsDataService.all();
     }
+
+
+
     $scope.isOk = false;
     $scope.slideSwitch = function () {
       if ($scope.isOk){

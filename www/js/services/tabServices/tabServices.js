@@ -12,7 +12,7 @@ define(['angular'], function (angular) {
    * }
    * */
 
-  return ['$state','infoService', function ($state,infoService) {
+  return ['$state', 'infoService', function ($state, infoService) {
     var chats = [{
       "parentId": 0,
       "subId": 0,
@@ -20,7 +20,6 @@ define(['angular'], function (angular) {
       "baseUrl": "tab.home",
       "show": true
     }];
-
 
 
     /*根据下标删除数组*/
@@ -39,12 +38,12 @@ define(['angular'], function (angular) {
       }
     };
 
+
     return {
       all: function () {
         return chats;
       },
       add: function (data, res) {
-
         chats = data;
         function isOk() {
           for (var i = 0; i < chats.length; i++) {
@@ -54,17 +53,17 @@ define(['angular'], function (angular) {
             }
           }
         }
-
         for (var a = 0; a < chats.length; a++) {
           chats[a].show = false;
           if (!isOk()) {
             chats.push(res);
             $state.go(res.baseUrl);
+
           } else {
             $state.go(res.baseUrl);
           }
         }
-        infoService.saveSession('tabNav',chats);
+        infoService.saveSession('tabNav', chats);
       },
       getRemove: function (res) {   /*删除tab时的判断*/
         if (infoService.getSession('tabNav') && infoService.getSession('tabNav') !== "") {
@@ -83,7 +82,7 @@ define(['angular'], function (angular) {
             chats.remove(i);
           }
         }
-        infoService.saveSession('tabNav',chats)
+        infoService.saveSession('tabNav', chats)
       },
       switchTab: function (res) {
         if (infoService.getSession('tabNav') && infoService.getSession('tabNav') !== "") {
@@ -96,8 +95,8 @@ define(['angular'], function (angular) {
               chats[i].show = false;
             }
           }
-          infoService.saveSession('tabNav',chats);
-        }else{
+          infoService.saveSession('tabNav', chats);
+        } else {
           for (var a = 0; a < chats.length; a++) {
             if (res.subId === chats[a].subId && res.parentId === chats[a].parentId) {
               chats[a].show = true;
@@ -106,9 +105,8 @@ define(['angular'], function (angular) {
               chats[a].show = false;
             }
           }
-          infoService.saveSession('tabNav',chats);
+          infoService.saveSession('tabNav', chats);
         }
-
       }
     };
 

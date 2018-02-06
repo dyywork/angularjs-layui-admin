@@ -41,7 +41,7 @@
         
         <div class="layui-body" ng-class="{bodySwitch:isOk}">
             <!--tabs区域-->
-            <tab-sub></tab-sub>
+            <tab-sub data="{{tabsData}}"></tab-sub>
             <!-- 内容主体区域 -->
             <div style="padding: 15px;">
                 <ui-view name="home"></ui-view>

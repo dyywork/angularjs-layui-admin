@@ -18,8 +18,6 @@ define(['angular'], function (angular) {
         scope.treeData = JSON.parse(attrs.data);
         elements.render();
         form.render();
-
-
         scope.goTree = function (res) {
           for (var i = 0; i < scope.treeData.length; i++) {
             if (res.parentId === scope.treeData[i].id) {
@@ -30,15 +28,10 @@ define(['angular'], function (angular) {
                   scope.treeData[i].childTree[j].show = false;
                 }
               }
-            } else {
-
             }
           }
           tabsDataService.add(scope.tabsData, res);
-
         };
-
-
       }
     }
   }]
