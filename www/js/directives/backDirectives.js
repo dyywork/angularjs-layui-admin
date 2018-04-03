@@ -10,7 +10,7 @@ define(['angular'],function (angular) {
         element.on('click', function () {
           attrs.back = function () {
             $ionicHistory.goBack();
-          }
+          };
           scope.$apply(attrs.back);
         });
 

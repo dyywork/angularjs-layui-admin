@@ -6,7 +6,7 @@
 define(['angular'], function (angular) {
   'use strict';
 
-  return ['httpServices', 'tabsDataService', 'infoService', function ( httpServices, tabsDataService, infoService) {
+  return ['httpServices', 'tabsDataService', 'infoService','$timeout', function ( httpServices, tabsDataService, infoService,$timeout) {
     return {
       restrict: 'AEMC',
       replace: true,
@@ -15,23 +15,33 @@ define(['angular'], function (angular) {
         var elements = layui.element,
           form = layui.form;
 
-        scope.treeData = JSON.parse(attrs.data);
-        elements.render();
-        form.render();
-        scope.goTree = function (res) {
-          for (var i = 0; i < scope.treeData.length; i++) {
-            if (res.parentId === scope.treeData[i].id) {
-              for (var j = 0; j < scope.treeData[i].childTree.length; j++) {
-                if (res.subId === scope.treeData[i].childTree[j].subId) {
-                  scope.treeData[i].childTree[j].show = true;
-                } else {
-                  scope.treeData[i].childTree[j].show = false;
+        $.get('../../json/treeJson.json',function (res) {
+          $timeout(function () {
+            scope.treeData = res;
+          },100)
+          scope.$watch('treeData',function (p1, p2, p3) {
+            elements.render();
+            form.render();
+            scope.goTree = function (res) {
+              for (var i = 0; i < scope.treeData.length; i++) {
+                if (res.parentId === scope.treeData[i].id) {
+                  for (var j = 0; j < scope.treeData[i].childTree.length; j++) {
+                    if (res.subId === scope.treeData[i].childTree[j].subId) {
+                      scope.treeData[i].childTree[j].show = true;
+                    } else {
+                      scope.treeData[i].childTree[j].show = false;
+                    }
+                  }
                 }
               }
-            }
-          }
-          tabsDataService.add(scope.tabsData, res);
-        };
+              tabsDataService.add(scope.tabsData, res);
+            };
+          })
+        });
+
+
+
+
       }
     }
   }]

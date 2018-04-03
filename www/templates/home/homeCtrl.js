@@ -1,12 +1,17 @@
-define(function () {
+define(['layui'],function (layui) {
   'use strict';
 
   var IosSelect = require('IosSelect');
 
-  return ['$scope', '$state', 'loadingService', 'PopupService','infoService','tabsDataService','$rootScope', function ($scope, $state, loadingService, PopupService,infoService,tabsDataService,$rootScope) {
-    var layer = layui.layer
-      , form = layui.form,
-      element = layui.element;
+  return ['$scope', '$state', 'loadingService', 'PopupService','infoService','tabsDataService','$rootScope','httpServices',
+    function ($scope, $state, loadingService, PopupService,infoService,tabsDataService,$rootScope,httpServices) {
+      var layer =layui.layer,
+        upload = layui.upload,
+        table = layui.table,
+        form=layui.form;
+
+
+
 
     $scope.loading = function () {
       loadingService.show();
@@ -34,6 +39,8 @@ define(function () {
       element.render()
     }
     form.render()
+
+
 
 
   }];

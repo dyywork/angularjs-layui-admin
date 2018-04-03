@@ -4,6 +4,10 @@ define(['angular'], function (angular) {
   return ['$http', '$q',function ($http, $q) {
     var factory = {};
     var urls = '';          //对应请求的地址；
+    factory.getUrl=function () {
+      return '';
+    }
+
     factory.getlist = function (endpoint, method, params) {
       var defer = $q.defer();
       if (method === 'GET') {

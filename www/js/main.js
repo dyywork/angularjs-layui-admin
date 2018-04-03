@@ -4,12 +4,11 @@ requirejs.config({
     jquery :          "../lib/js/jquery-2.1.4.min",
     IosSelect:        '../lib/iosselect-master/src/iosSelect',
     layui:            '../lib/layui/layui.all',
+    //layui:            '../lib/layui/layui.all',
     angular:          '../lib/ionic/js/angular/angular',
     angularAnimate:   '../lib/ionic/js/angular/angular-animate.min',
     angularSanitize:  '../lib/ionic/js/angular/angular-sanitize.min',
-    uiRouter:         '../lib/ionic/js/angular-ui/angular-ui-router.min',
-    layuiElement:     '../lib/layui/lay/modules/element',
-    layuiForm:        '../lib/layui/lay/modules/form'
+    uiRouter:         '../lib/ionic/js/angular-ui/angular-ui-router.min'
 
   },
   shim: {
@@ -17,9 +16,8 @@ requirejs.config({
     angularAnimate :    {deps: ['angular']},
     angularSanitize :   {deps: ['angular']},
     uiRouter :          {deps: ['angular']},
-    layui:              {exports: 'layui'},
-    layuiElement:       {deps:['layui']},
-    layuiForm:          {deps:['layui']}
+    layui:              {des:['jquery'],exports: 'layui'}
+
   },
   priority: [
     'angular'

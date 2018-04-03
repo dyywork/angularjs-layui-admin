@@ -1,18 +1,17 @@
-define(function () {
+define(['layui'],function (layui) {
   'use strict';
 
   return ['$scope', '$state', 'httpServices', 'tabsDataService', 'infoService','$rootScope', function ($scope, $state, httpServices, tabsDataService, infoService,$rootScope) {
-    var element = layui.element,
-      form = layui.form;
+    /*var element = layui.element,
+      form = layui.form;*/
 
 
-    httpServices.getlist('../../json/treeJson.json', 'GET').then(function (res) {
+  /*  httpServices.getlist('../../json/treeJson.json', 'GET').then(function (res) {
       $scope.treeData = res;
-    });
+    });*/
 
     var tabs = infoService.getSession('tabNav');
     if (tabs &&tabs.length && tabs.length > 1) {
-      console.log(tabs)
       $rootScope.tabsData = tabs;
 
     } else {
