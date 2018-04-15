@@ -3,8 +3,6 @@ define([
     'jquery',
     'IosSelect',
     'layui',
-    'layuiElement',
-    'layuiForm',
     'uiRouter',
     'config',
     'filters/filters',

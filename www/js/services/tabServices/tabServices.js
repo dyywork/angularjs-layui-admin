@@ -14,10 +14,10 @@ define(['angular'], function (angular) {
 
   return ['$state','infoService', function ($state,infoService) {
     var chats = [{
-      "parentId": 0,
-      "subId": 0,
+      "parentid": 0,
+      "subid": 0,
       "title": "首页",
-      "baseUrl": "tab.home",
+      "baseurl": "tab.home",
       "show": true
     }];
 
@@ -48,7 +48,7 @@ define(['angular'], function (angular) {
         chats = data;
         function isOk() {
           for (var i = 0; i < chats.length; i++) {
-            if (chats[i].subId === res.subId && chats[i].parentId === res.parentId) {
+            if (chats[i].subid === res.subid && chats[i].parentid === res.parentid) {
               chats[i].show = true;
               return true;
             }
@@ -59,9 +59,9 @@ define(['angular'], function (angular) {
           chats[a].show = false;
           if (!isOk()) {
             chats.push(res);
-            $state.go(res.baseUrl);
+            $state.go(res.baseurl);
           } else {
-            $state.go(res.baseUrl);
+            $state.go(res.baseurl);
           }
         }
         infoService.saveSession('tabNav',chats);
@@ -71,14 +71,14 @@ define(['angular'], function (angular) {
           chats = infoService.getSession('tabNav');
         }
         for (var i = 0; i < chats.length; i++) {
-          if (chats[i].subId === res.subId && res.show && i > 0 && (i + 1) === chats.length && chats[i].parentId === res.parentId) {
+          if (chats[i].subid === res.subid && res.show && i > 0 && (i + 1) === chats.length && chats[i].parentid === res.parentid) {
             chats[i - 1].show = true;
-            $state.go(chats[i - 1].baseUrl);
+            $state.go(chats[i - 1].baseurl);
             chats.remove(i);
-          } else if (chats[i].subId === res.subId && !res.show && chats[i].parentId === res.parentId) {
+          } else if (chats[i].subid === res.subid && !res.show && chats[i].parentid === res.parentid) {
             chats.remove(i);
-          } else if (chats[i].subId === res.subId && res.show && i < chats.length && chats[i].parentId === res.parentId) {
-            $state.go(chats[i + 1].baseUrl);
+          } else if (chats[i].subid === res.subid && res.show && i < chats.length && chats[i].parentid === res.parentid) {
+            $state.go(chats[i + 1].baseurl);
             chats[i + 1].show = true;
             chats.remove(i);
           }
@@ -89,9 +89,9 @@ define(['angular'], function (angular) {
         if (infoService.getSession('tabNav') && infoService.getSession('tabNav') !== "") {
           chats = infoService.getSession('tabNav');
           for (var i = 0; i < chats.length; i++) {
-            if (res.subId === chats[i].subId && res.parentId === chats[i].parentId) {
+            if (res.subid === chats[i].subid && res.parentid === chats[i].parentid) {
               chats[i].show = true;
-              $state.go(res.baseUrl);
+              $state.go(res.baseurl);
             } else {
               chats[i].show = false;
             }
@@ -99,9 +99,9 @@ define(['angular'], function (angular) {
           infoService.saveSession('tabNav',chats);
         }else{
           for (var a = 0; a < chats.length; a++) {
-            if (res.subId === chats[a].subId && res.parentId === chats[a].parentId) {
+            if (res.subid === chats[a].subid && res.parentid === chats[a].parentid) {
               chats[a].show = true;
-              $state.go(res.baseUrl);
+              $state.go(res.baseurl);
             } else {
               chats[a].show = false;
             }

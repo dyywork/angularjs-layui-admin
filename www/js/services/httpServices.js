@@ -3,7 +3,7 @@ define(['angular'], function (angular) {
 
   return ['$http', '$q',function ($http, $q) {
     var factory = {};
-    var urls = '';          //对应请求的地址；
+    var urls = 'http://localhost:3000/';          //对应请求的地址；
     factory.getlist = function (endpoint, method, params) {
       var defer = $q.defer();
       if (method === 'GET') {
@@ -12,10 +12,12 @@ define(['angular'], function (angular) {
           method: "GET",
           headers: {'Content-Type': 'application/json'},
           params: params
-        }).success(function (data) {
+        }).success(function (data,status,config) {
           defer.resolve(data);
+         
         }).error(function (data, status, config) {
           // defer.resolve(data);
+
           defer.reject(data);
         }).finally(function (data) {
           defer.reject(data)

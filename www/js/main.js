@@ -17,9 +17,7 @@ requirejs.config({
     angularAnimate :    {deps: ['angular']},
     angularSanitize :   {deps: ['angular']},
     uiRouter :          {deps: ['angular']},
-    layui:              {exports: 'layui'},
-    layuiElement:       {deps:['layui']},
-    layuiForm:          {deps:['layui']}
+    layui:              {exports: 'layui'}
   },
   priority: [
     'angular'

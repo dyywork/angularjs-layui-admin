@@ -1,14 +1,102 @@
 /* Empty. Add your own CSS if you like */
 
 .login-form{
-    width: 600px;
-    height: 400px;
-    margin: 200px auto 0px;
+    background-color: #fff;
+    padding: 20px;
+    color: #000000;
+    border-radius: 5px;
 }
 .margauto{
     margin: 0px auto;
 }
+.contents{
+    padding-top: 45px;
+    width: 100%;
+   
+}
+.content_title{
+    width: 100%;
+    display: flex;
+    align-items:center;/*垂直居中*/
+    justify-content: center;/*水平居中*/
+    margin-bottom: 6vh;
+}
+.content_btn{
+    width: 80%;
+    background-color: #00B5EA!important;
+}
+.content_title_list{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items:center;/*垂直居中*/
+    justify-content: center;/*水平居中*/
+}
+.progressdetail_dot_ontime {
+    display: block;
+    clear: both;
+    width: 15px;
+    height: 12px;
+    background-color: #D0F7FF;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    padding-top: 3px;
+    margin-right: 4px;
+}
 
+.progressdetail_dot_ontime:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 9px;
+    height: 9px;
+    margin: 0 auto;
+    background-color: #0FCDF2;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.content_title_list1{
+    padding: 5px 0;
+    width: 80%;
+    display: flex;
+    font-weight: 800;
+    font-size: 16px;
+    align-items:center;/*垂直居中*/
+    justify-content:left;/*水平居中*/
+    margin-left: 10%;
+}
+.content_title_list2{
+    padding: 5px 0;
+    width: 74%;
+    display: flex;
+    align-items:center;/*垂直居中*/
+    justify-content:left;/*水平居中*/
+    margin-left: 16%;
+}
+.content_title_list input{
+    height: 33px;
+    width: 60%;
+    margin-left: 17px;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px #e4e3e8 solid;
+    padding-left: 12px;
+}
+.content_title_list span{
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+}
+.title_youyou{
+    font-size: 24px;
+    font-weight: 200;
+}
+.content_img{
+    width: 40px;
+    height: 40px;
+    margin-right: 17px;
+}
 .slideSwitch{
     -webkit-animation:myfirst1 0.1s linear;
     -webkit-animation-play-state:running;

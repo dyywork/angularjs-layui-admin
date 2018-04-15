@@ -2,10 +2,10 @@
     <div class="layui-side-scroll">
         <ul class="layui-nav layui-nav-tree">
             <li class="layui-nav-item" ng-repeat="item in treeData"
-                ng-class="{'layui-nav-itemed': item.parentShow}">
-                <a class="" href="javascript:;" ng-click="treeHeader(item)">{{item.mainTitle}}</a>
+                ng-class="{'layui-nav-itemed': item.parentshow}">
+                <a class="" href="javascript:;" ng-click="treeHeader(item)">{{item.maintitle}}</a>
                 <dl class="layui-nav-child">
-                    <dd ng-repeat="i in item.childTree" ng-class="{'layui-this': i.show }"
+                    <dd ng-repeat="i in item.childtrees" ng-class="{'layui-this': i.show }"
                         ng-click="goTree(i);$event.stopPropagation()">
                         <a href="javascript:;">{{i.title}}</a></dd>
                 </dl>

@@ -1,4 +1,4 @@
-define(function () {
+define(['angular','layui'],function (angular,layui) {
   'use strict';
 
   var IosSelect = require('IosSelect');
