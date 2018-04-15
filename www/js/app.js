@@ -3,6 +3,7 @@ define([
     'jquery',
     'IosSelect',
     'layui',
+
     'uiRouter',
     'config',
     'filters/filters',
