@@ -3,10 +3,10 @@
  * @date 2018/1/19
  * @Description:侧边栏公用指令
  */
-define(['angular'], function (angular) {
+define(['angular', 'layui'], function (angular, layui) {
   'use strict';
 
-  return ['httpServices', 'tabsDataService', 'infoService','$timeout', function ( httpServices, tabsDataService, infoService,$timeout) {
+  return ['httpServices', 'tabsDataService', 'infoService', '$timeout', function (httpServices, tabsDataService, infoService, $timeout) {
     return {
       restrict: 'AEMC',
       replace: true,
@@ -14,12 +14,11 @@ define(['angular'], function (angular) {
       link: function (scope, element, attrs) {
         var elements = layui.element,
           form = layui.form;
-
-        $.get('../../json/treeJson.json',function (res) {
+        $.get('../../json/treeJson.json', function (res) {
           $timeout(function () {
             scope.treeData = res;
-          },100)
-          scope.$watch('treeData',function (p1, p2, p3) {
+          }, 100)
+          scope.$watch('treeData', function (p1, p2, p3) {
             elements.render();
             form.render();
             scope.goTree = function (res) {
@@ -38,10 +37,6 @@ define(['angular'], function (angular) {
             };
           })
         });
-
-
-
-
       }
     }
   }]

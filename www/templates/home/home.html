@@ -2,7 +2,15 @@
 
 
 <div class="layui-btn layui-btn-normal" ng-click="loading()">加载层</div>
-
-
 <div class="layui-btn" ng-click="popup()">提示框</div>
 <div class="layui-btn layui-btn-normal" ng-click="addTabs()">新增一个tab页</div>
+<form action="" class="layui-form">
+  <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">日期范围</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" id="test" lay-date="test"  readonly ng-model="startDate" placeholder=" - "/>
+      </div>
+    </div>
+  </div>
+</form>

@@ -4,7 +4,6 @@ requirejs.config({
     jquery :          "../lib/js/jquery-2.1.4.min",
     IosSelect:        '../lib/iosselect-master/src/iosSelect',
     layui:            '../lib/layui/layui.all',
-    //layui:            '../lib/layui/layui.all',
     angular:          '../lib/ionic/js/angular/angular',
     angularAnimate:   '../lib/ionic/js/angular/angular-animate.min',
     angularSanitize:  '../lib/ionic/js/angular/angular-sanitize.min',
