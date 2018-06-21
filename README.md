@@ -49,13 +49,24 @@ layui css框架
 当然还有jquery
 
 首先到项目目录
+```javascript
 
-npm install 或 cnpm install （cnpm 为淘宝镜像大家都懂的）
+npm install || cnpm install //（cnpm 为淘宝镜像大家都懂的）
 
-然后 npm run start 就可以运行起来了
+```
+运行 
+```javascript
 
-npm run build 是打包的命令
+npm run start 
 
+```
+生产打包
+
+```javascript
+
+npm run build
+
+```
 作者 : 丁永亚</br>
 ---
 邮箱  :  yahya_dyy@163.com
