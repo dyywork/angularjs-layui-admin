@@ -12,7 +12,7 @@
 我也赶紧试了一把，在这里我修改了layui.all.js
 
 支持总数count 和数据data 支持嵌套式书写，数据格式例如
-
+```javascript
 [
     content:{
         data:[],
@@ -21,8 +21,9 @@
     resultCode:200,
     resultMsg:'成功',
 ]
-
+```
 可以直接配置
+```json
 response: {
       statusName: 'resultCode' //数据状态的字段名称，默认：code
       ,statusCode: 200 //成功的状态码，默认：0
@@ -30,7 +31,7 @@ response: {
       ,countName: 'content.total' //数据总数的字段名称，默认：count
       ,dataName: 'content.data' //数据列表的字段名称，默认：data
     }
-
+```
 下面是部分截图
 
 !['form表单部分'](www/img/form.jpg)

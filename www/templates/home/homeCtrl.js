@@ -11,7 +11,7 @@ define(['layui'], function (layui) {
         form = layui.form,
         laydate = layui.laydate;
 
-      laydate.render()
+      laydate.render();
 
       //日期范围
       laydate.render({
@@ -19,18 +19,18 @@ define(['layui'], function (layui) {
         , range: true
       });
 
-$scope.startDate = ''
+      $scope.startDate = '';
       $scope.loading = function () {
         loadingService.show();
         setTimeout(function () {
           loadingService.hide()
         }, 2000);
-      }
+      };
       $scope.popup = function () {
         PopupService.alert($scope.startDate, function () {
           layer.closeAll()
         })
-      }
+      };
 
       $scope.addTabs = function () {
         var tabData = tabsDataService.all();
@@ -41,10 +41,10 @@ $scope.startDate = ''
           "title": "弹出层",
           "baseUrl": "tab.layer",
           "show": false
-        })
+        });
         $rootScope.tabsData = infoService.getSession('tabNav');
         element.render()
-      }
+      };
       form.render()
 
 
