@@ -14,26 +14,50 @@
     -webkit-animation-play-state:running;
     -webkit-animation-fill-mode:forwards;
 }
+.slideSwitchOn{
+    -webkit-animation:myfirst1On 0.1s linear;
+    -webkit-animation-play-state:running;
+    -webkit-animation-fill-mode:forwards;
+}
 .bodySwitch{
     -webkit-animation:myfirst 0.1s linear;
     -webkit-animation-play-state:running;
     -webkit-animation-fill-mode:forwards;
 }
-
+.bodySwitchOn{
+  -webkit-animation:myfirstOn 0.1s linear;
+  -webkit-animation-play-state:running;
+  -webkit-animation-fill-mode:forwards;
+}
+@keyframes myfirstOn
+{
+  0%   {left:0px;}
+  100% {left:200px;}
+}
+@-webkit-keyframes myfirstOn
+{
+  0%   {left:0px;}
+  100% {left:200px;}
+}
+@-moz-keyframes myfirstOn
+{
+  0%   {left:0px;}
+  100% {left:200px;}
+}
 @keyframes myfirst
  {
-     0%   {left:220px;}
-     100% {left:20px;}
+     0%   {left:200px;}
+     100% {left:0px;}
  }
 @-webkit-keyframes myfirst
  {
-     0%   {left:220px;}
-     100% {left:20px;}
+     0%   {left:200px;}
+     100% {left:0px;}
  }
 @-moz-keyframes myfirst
 {
-    0%   {left:220px;}
-    100% {left:20px;}
+    0%   {left:200px;}
+    100% {left:0px;}
 }
 @keyframes myfirst1
 {
@@ -49,6 +73,21 @@
 {
     0%   {left:0px;}
     100% {left:-200px;}
+}
+@keyframes myfirst1On
+{
+  0%   {left:-220px;}
+  100% {left:0px;}
+}
+@-webkit-keyframes myfirst1On
+{
+  0%   {left:-200px;}
+  100% {left:0px;}
+}
+@-moz-keyframes myfirst1On
+{
+  0%   {left:-200px;}
+  100% {left:0px;}
 }
 /*@-moz-keyframes myfirst !* Firefox *!
 {

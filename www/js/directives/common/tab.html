@@ -1,4 +1,4 @@
-<div class="layui-tab layui-tab-brief" lay-filter="test1" lay-allowClose="true">
+<div class="layui-tab layui-tab-brief layui-tab-card" style="margin-top: 0;" lay-filter="test1" lay-allowClose="tabsData.length!=1">
     <ul class="layui-tab-title">
         <li ng-repeat="item in tabsData" ng-click="goTabs(item);$event.stopPropagation()" ng-class="{'layui-this':item.show}">
             {{item.title}}

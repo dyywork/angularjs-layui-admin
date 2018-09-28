@@ -1,8 +1,6 @@
 define(['layui'], function (layui) {
   'use strict';
 
-  var IosSelect = require('IosSelect');
-
   return ['$scope', '$state', 'loadingService', 'PopupService', 'infoService', 'tabsDataService', '$rootScope', 'httpServices',
     function ($scope, $state, loadingService, PopupService, infoService, tabsDataService, $rootScope, httpServices) {
       var layer = layui.layer,
@@ -11,8 +9,7 @@ define(['layui'], function (layui) {
         form = layui.form,
         laydate = layui.laydate;
 
-      laydate.render();
-
+     /* laydate.render();
       //日期范围
       laydate.render({
         elem: '#test6'
@@ -45,7 +42,7 @@ define(['layui'], function (layui) {
         $rootScope.tabsData = infoService.getSession('tabNav');
         element.render()
       };
-      form.render()
+      form.render() */
 
 
     }];

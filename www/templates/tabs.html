@@ -1,12 +1,12 @@
 <ui-view>
     <div class="layui-layout layui-layout-admin">
-        <div class="layui-header" style="margin-bottom: 300px;">
+        <div class="layui-header layui-bg-black" style="margin-bottom: 300px;">
             <div class="layui-logo">angularjs后台布局</div>
-            
             <!-- 头部区域（可配合layui已有的水平导航） -->
             <ul class="layui-nav layui-layout-left">
-                <button class="layui-btn layui-btn-sm" ng-click="slideSwitch()">
-                    <i class="layui-icon">&#xe60f;</i>
+                <button class="layui-btn layui-btn-sm layui-bg-black" ng-click="slideSwitch()">
+                  <i class="layui-icon layui-icon-spread-left" ng-show="isOk"></i>
+                  <i class="layui-icon layui-icon-shrink-right" ng-show="!isOk"></i>
                 </button>
                 <li class="layui-nav-item"><a href="">控制台</a></li>
                 <li class="layui-nav-item"><a href="">商品管理</a></li>
@@ -33,22 +33,20 @@
                 </li>
                 <li class="layui-nav-item"><a href="">退了</a></li>
             </ul>
-            
         </div>
         <!--侧边栏-->
-        <slide-tree data="{{treeData}}"></slide-tree>
-    
-        
-        <div class="layui-body" ng-class="{bodySwitch:isOk}">
+        <slide-tree ng-class="{slideSwitch:isOk,slideSwitchOn:!isOk}" data="{{treeData}}"></slide-tree>
+
+        <div class="layui-body" ng-class="{bodySwitch:isOk,bodySwitchOn:!isOk}">
             <!--tabs区域-->
             <tab-sub data="{{tabsData}}"></tab-sub>
             <!-- 内容主体区域 -->
-            <div style="padding: 15px;">
+            <div class="layui-anim" data-anim="layui-anim-scale" style="padding: 15px;">
                 <ui-view name="home"></ui-view>
             </div>
         </div>
-        
-        <div class="layui-footer"  ng-class="{bodySwitch:isOk}">
+
+        <div class="layui-footer"  ng-class="{bodySwitch:isOk,bodySwitchOn:!isOk}">
             <!-- 底部固定区域 -->
             底部固定区域
         </div>
