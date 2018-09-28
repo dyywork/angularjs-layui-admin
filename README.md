@@ -43,3 +43,7 @@ npm run build
 邮箱  :  yahya_dyy@163.com
 ----
 
+## 📜 License
+Copyright (c) 2018 09 http://github.com/dyywork
+
+The MIT License
