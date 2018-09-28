@@ -3,11 +3,14 @@
         <ul class="layui-nav layui-nav-tree">
             <li class="layui-nav-item" ng-repeat="item in treeData"
                 ng-class="{'layui-nav-itemed': item.parentShow}">
-                <a class="" href="javascript:;" ng-click="treeHeader(item)">{{item.mainTitle}}</a>
+                <a class="" href="javascript:;" ng-click="treeHeader(item)">
+                  <i class="layui-icon" ng-class="item.icon"></i>
+                  &nbsp;{{item.mainTitle}}
+                </a>
                 <dl class="layui-nav-child">
                     <dd ng-repeat="i in item.childTree" ng-class="{'layui-this': i.show }"
                         ng-click="goTree(i);$event.stopPropagation()">
-                        <a href="javascript:;">{{i.title}}</a></dd>
+                        <a href="javascript:;" style="padding-left: 40px;">{{i.title}}</a></dd>
                 </dl>
             </li>
         </ul>

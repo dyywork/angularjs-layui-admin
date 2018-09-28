@@ -2,6 +2,7 @@
     {
         "mainTitle":"页面元素",
         "id":0,
+        "icon": "layui-icon-home",
         "parentShow":true,
         "childTree":[
             {
@@ -65,6 +66,7 @@
     {
         "mainTitle":"组件示例",
         "id":1,
+        "icon": "layui-icon-set-sm",
         "parentShow":false,
         "childTree":[
             {

@@ -4,8 +4,6 @@
 
 刚刚贤心大佬刚更新了layui 2.4.0++，
 
-我也赶紧试了一把，在这里我修改了layui.all.js
-
 
 !['form表单部分'](www/img/form.jpg)
 

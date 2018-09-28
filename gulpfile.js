@@ -25,3 +25,4 @@ gulp.task('sass', function(done) {
 gulp.task('watch', ['sass'], function() {
   gulp.watch(paths.sass, ['sass']);
 });
+
