@@ -4,21 +4,12 @@
             <div class="layui-logo">angularjs后台布局</div>
             <!-- 头部区域（可配合layui已有的水平导航） -->
             <ul class="layui-nav layui-layout-left">
-                <button class="layui-btn layui-btn-sm layui-bg-black" ng-click="slideSwitch()">
-                  <i class="layui-icon layui-icon-spread-left" ng-show="isOk"></i>
-                  <i class="layui-icon layui-icon-shrink-right" ng-show="!isOk"></i>
+              <li class="layui-nav-item">
+                <button class="layui-btn layui-btn-sm layui-bg-black" ng-click="ng.slideSwitch()">
+                  <i class="layui-icon layui-icon-spread-left" ng-show="ng.isOk"></i>
+                  <i class="layui-icon layui-icon-shrink-right" ng-show="!ng.isOk"></i>
                 </button>
-                <li class="layui-nav-item"><a href="">控制台</a></li>
-                <li class="layui-nav-item"><a href="">商品管理</a></li>
-                <li class="layui-nav-item"><a href="">用户</a></li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">其它系统</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="">邮件管理</a></dd>
-                        <dd><a href="">消息管理</a></dd>
-                        <dd><a href="">授权管理</a></dd>
-                    </dl>
-                </li>
+              </li>
             </ul>
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
@@ -27,17 +18,15 @@
                         莫名点
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">安全设置</a></dd>
+                        <dd ng-click="ng.goOut()"><a href="">安全退出</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">退了</a></li>
             </ul>
         </div>
         <!--侧边栏-->
-        <slide-tree ng-class="{slideSwitch:isOk,slideSwitchOn:!isOk}" data="{{treeData}}"></slide-tree>
+        <slide-tree ng-class="{slideSwitch:ng.isOk,slideSwitchOn:!ng.isOk}" data="{{treeData}}"></slide-tree>
 
-        <div class="layui-body" ng-class="{bodySwitch:isOk,bodySwitchOn:!isOk}">
+        <div class="layui-body" style="background: #FFFFFF;" ng-class="{bodySwitch:ng.isOk,bodySwitchOn:!ng.isOk}">
             <!--tabs区域-->
             <tab-sub data="{{tabsData}}"></tab-sub>
             <!-- 内容主体区域 -->
@@ -46,7 +35,7 @@
             </div>
         </div>
 
-        <div class="layui-footer"  ng-class="{bodySwitch:isOk,bodySwitchOn:!isOk}">
+        <div class="layui-footer"  ng-class="{bodySwitch:ng.isOk,bodySwitchOn:!ng.isOk}">
             <!-- 底部固定区域 -->
             底部固定区域
         </div>

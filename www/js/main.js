@@ -7,7 +7,8 @@ requirejs.config({
     angular:          '../lib/ionic/js/angular/angular',
     angularAnimate:   '../lib/ionic/js/angular/angular-animate.min',
     angularSanitize:  '../lib/ionic/js/angular/angular-sanitize.min',
-    uiRouter:         '../lib/ionic/js/angular-ui/angular-ui-router.min'
+    uiRouter:         '../lib/ionic/js/angular-ui/angular-ui-router.min',
+    canvasAnimate:    '../lib/js/canvas-particle'
 
   },
   shim: {
@@ -15,7 +16,8 @@ requirejs.config({
     angularAnimate :    {deps: ['angular']},
     angularSanitize :   {deps: ['angular']},
     uiRouter :          {deps: ['angular']},
-    layui:              {des:['jquery'],exports: 'layui'}
+    layui:              {des:['jquery'],exports: 'layui'},
+    canvasAnimate:      {exports: 'canvasAnimate'}
 
   },
   priority: [

@@ -1,9 +1,12 @@
 /* Empty. Add your own CSS if you like */
 
 .login-form{
-    width: 600px;
-    height: 400px;
-    margin: 200px auto 0px;
+  padding: 50px;
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  margin: 300px auto 0px;
+  background: rgba(255,255,255,0.5);
 }
 .margauto{
     margin: 0px auto;
@@ -88,6 +91,33 @@
 {
   0%   {left:-200px;}
   100% {left:0px;}
+}
+.layui-relative{
+  position: relative;
+}
+.layui-relative i{
+  color: #FFFFFF;
+  position: absolute;
+  top: 10px;
+  left: 13px;
+}
+.layui-relative input {
+  border-width: 0;
+  color: #FFFFFF;
+  padding-left: 35px;
+  background: rgba(255,255,255,0.5)
+}
+.layui-relative input::placeholder {
+  color: #FFFFFF;
+}
+.layui-raduis{
+  border-radius: 19px!important;
+}
+.layui-row{
+  width: 100%!important;
+}
+.padding{
+  padding: 10px;
 }
 /*@-moz-keyframes myfirst !* Firefox *!
 {

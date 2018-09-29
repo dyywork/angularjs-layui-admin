@@ -3,7 +3,7 @@ define([
     'jquery',
     'IosSelect',
     'layui',
-
+    'canvasAnimate',
     'uiRouter',
     'config',
     'filters/filters',

@@ -1,34 +1,33 @@
 define(['layui'],function (layui) {
   'use strict';
 
-  return ['$scope', '$state', 'httpServices', 'tabsDataService', 'infoService','$rootScope', function ($scope, $state, httpServices, tabsDataService, infoService,$rootScope) {
-    /*var element = layui.element,
-      form = layui.form;*/
+  return ['$scope', '$state', 'httpServices', 'tabsDataService', 'infoService','$rootScope',
+    function ($scope, $state, httpServices, tabsDataService, infoService,$rootScope) {
 
-
-  /*  httpServices.getlist('../../json/treeJson.json', 'GET').then(function (res) {
-      $scope.treeData = res;
-    });*/
-
-    var tabs = infoService.getSession('tabNav');
-    if (tabs &&tabs.length && tabs.length > 1) {
-      $rootScope.tabsData = tabs;
-
-    } else {
-      $rootScope.tabsData = tabsDataService.all();
-    }
-
-
-
-    $scope.isOk = false;
-    $scope.slideSwitch = function () {
-      if ($scope.isOk){
-        $scope.isOk = false;
-      }else {
-        $scope.isOk = true;
+    $scope.ng={
+      isOk: false,
+      tabs: infoService.getSession('tabNav'),
+      init: function () {
+        var _this = this;
+        if (_this.tabs && _this.tabs.length && _this.tabs.length > 1) {
+          $rootScope.tabsData = _this.tabs;
+        } else {
+          $rootScope.tabsData = tabsDataService.all();
+        }
+      },
+      slideSwitch: function () {
+        var _this = this;
+        if (_this.isOk){
+          _this.isOk = false;
+        }else {
+          _this.isOk = true;
+        }
+      },
+      goOut: function () {
+        $state.go('login')
       }
-
     }
+    $scope.ng.init()
 
   }]
 
