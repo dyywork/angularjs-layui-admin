@@ -1,8 +1,8 @@
 
 define(function () {
   'use strict';
-  return ['$scope', '$state', 'httpServices',
-    function ($scope, $state, httpServices) {
+  return ['$scope', '$state', 'httpServices','PopupService',
+    function ($scope, $state, httpServices,PopupService) {
     var element = layui.element,
       form = layui.form;
 
@@ -30,7 +30,17 @@ define(function () {
         CanvasParticle(config);
       },
       goDash: function () {
+        var _this = this
         $state.go('tab.home')
+      /*  httpServices.getlist('/api/users/login','POST',{userName:_this.name,password:_this.age}).then(function (res) {
+          console.log(res)
+          if(res.status === 1) {
+            $state.go('tab.home')
+          } else {
+            PopupService.alert(res.msg)
+          }
+        })*/
+        //
       },
       keyUp: function (e) {
         console.log(e)

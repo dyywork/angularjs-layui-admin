@@ -9,6 +9,8 @@ define(['layui'], function (layui) {
         form = layui.form,
         laydate = layui.laydate;
 
+
+
      /* laydate.render();
       //日期范围
       laydate.render({
