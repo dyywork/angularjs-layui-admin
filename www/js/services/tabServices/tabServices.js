@@ -16,7 +16,7 @@ define(['angular'], function (angular) {
     var chats = [{
       "parentId": 0,
       "subId": 0,
-      "title": "首页",
+      "title": "冰箱",
       "baseUrl": "tab.home",
       "show": true
     }];

@@ -1,9 +1,10 @@
-<div class="layui-tab layui-tab-brief layui-tab-card" style="margin-top: 0;" lay-filter="test1" lay-allowClose="tabsData.length!=1">
+<div class="layui-tab layui-tab-brief layui-tab-card" style="margin-top: 0;" lay-filter="test1">
     <ul class="layui-tab-title">
-        <li ng-repeat="item in tabsData" ng-click="goTabs(item);$event.stopPropagation()" ng-class="{'layui-this':item.show}">
+        <li ng-repeat="item in tabsData" ng-right-click="decrement(item)" ng-click="goTabs(item);$event.stopPropagation()" ng-class="{'layui-this':item.show}">
             {{item.title}}
-            <i class="layui-icon layui-unselect layui-tab-close" ng-hide="tabsData.length == 1"
+            <i class="layui-icon layui-unselect layui-tab-close" ng-hide="$index == 0"
                ng-click="goRemoveTabs(item);$event.stopPropagation()">&#x1006;</i>
         </li>
     </ul>
 </div>
+

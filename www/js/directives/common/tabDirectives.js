@@ -18,7 +18,9 @@ define(['angular'], function (angular) {
         elements.render();
         form.render();
         $rootScope.tabsData = JSON.parse(attrs.data);
-
+        scope.decrement = function (res) {
+          console.log(res)
+        }
         scope.goTabs = function (res) {
           for (var i = 0; i < scope.treeData.length; i++) {
             if (res.parentId === scope.treeData[i].id) {
